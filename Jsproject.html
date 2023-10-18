@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jsproject</title>
+</head>
+<style>
+
+
+.container{width: 20%;
+height: 43vh;
+margin: auto;
+border: 2px solid black;
+background-image: url(BMI.webp);
+background-size: cover;
+color: white
+  ;
+
+}
+
+button{width: 130px;
+height: 30px;
+margin-left: 30%;
+margin-top: 3vh;
+background-color: rgb(61, 255, 2);
+border: none;
+border-radius: 10px;
+}
+
+.mass{width: 100%;
+height: 4vh;
+}
+
+table{margin: auto;
+}
+
+.height{width: 100%;
+height: 4vh;
+}
+
+.Result{width: 100%;
+height: 4vh;
+border: 1px solid black;
+background-color: black;
+}
+
+h2{text-align: center;
+}
+
+
+@media(max-width:700px){
+
+.container{
+   
+width: 100%;
+height: 100vh;
+margin: 0;
+border: 2px solid black;
+}
+
+
+
+
+
+}
+
+</style>
+
+<body>
+<div class="container"> 
+<h2>Body Mass Index</h2>
+<table>
+<tr>
+<td>Mass </td>
+<td><input type="number" class="mass" placeholder="Kilogram"></td>
+</tr>
+<tr>
+<td>Height</td> 
+<td><input type="number" class="height" placeholder="Meter"></td>
+</tr>
+<tr>
+<td>Result</td>
+<td><p class="Result" ></p></td>
+
+</tr>
+</table>
+
+<button onclick="Turnon()">Calulate</button>
+</div>
+
+
+ <script>
+  function Turnon(){
+  var a=document.querySelector(".mass").value;  
+  var b=document.querySelector(".height").value; 
+  var c=a/(b*b);
+  var d=c.toFixed(2);
+  document.querySelector(".Result").innerHTML=d;
+
+   }
+
+ </script>   
+    
+</body>
+</html>
