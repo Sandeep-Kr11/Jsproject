@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jsproject2</title>
+</head>
+<style>
+
+
+.container{width: 30%;
+height: 80vh;
+margin: auto;
+background-image: url(nature/pexels-photo-417142.jpeg);
+background-size: cover;
+text-align: center;
+}
+
+.Dolphins{margin-left: 20%;
+color: white;}
+
+.Koalas{margin-left: 20%;
+color: white;}
+
+#Dolphins_average{width: 50%;
+height: 25px;
+border: 1px solid white;
+margin-left: 18%;
+color:rgb(13, 255, 0) ;
+border-radius: 15px;
+border-color:rgb(13, 255, 0) ;}
+
+#Koalas_average{width: 50%;
+height: 25px;
+border: 1px solid white;
+margin-left: 18%;
+color:rgb(13, 255, 0) ;
+border-color:rgb(13, 255, 0) ;
+border-radius: 15px;
+}
+
+h2{color: white;}
+
+#h1s{color: white;}
+
+button{height: 30px;
+background-color: rgb(13, 255, 0);
+border: none;
+border-radius: 15px;
+color: black;}
+
+@media(max-width:700px){
+
+.container{width: 100%;
+height: 100vh;
+margin: auto;
+background-image: url(nature/pexels-photo-417142.jpeg);
+background-size: cover;
+text-align: center;
+}
+
+
+
+}
+
+</style>
+<body>
+<div class="container">
+<h2>Dolphins Score</h2>
+<div class="Dolphins">
+<table>
+<tr>
+<td>Score-1</td>
+<td><input type="number" placeholder="Score-1" id="Score-1"></td>
+</tr>
+
+<tr>
+<td>Score-2</td>
+<td><input type="number" placeholder="Score-2" id="Score-2" ></td>
+</tr>
+
+<tr>
+<td>Score-3</td>
+<td><input type="number"placeholder="Score-3" id="Score-3"></td>
+</tr>
+</table> 
+<p id="Dolphins_average">Average Score</p>
+
+</div>
+<h2>Koalas Score</h2>
+<div class="Koalas">
+<table>
+<tr>
+<td>Score-1</td>
+<td><input type="number" placeholder="Score-1" id="Score-4"></td>
+</tr>
+    
+<tr>
+<td>Score-2</td>
+<td><input type="number" placeholder="Score-2" id="Score-5" ></td>
+</tr>
+
+<tr>
+<td>Score-3</td>
+<td><input type="number"placeholder="Score-3" id="Score-6"></td>
+</tr>
+</table> 
+<p id="Koalas_average">Average Score</p>
+</div>
+<button onclick="team()">Calculate</button> 
+<button onclick="turnon()">Who is Winner??</button>
+<!-- <img src="" alt="" Id="Image"> -->
+<h1 id="h1s"></h1> 
+</div>
+
+
+<script>
+function team(){
+var a=document.querySelector("#Score-1").value;
+var b=document.querySelector("#Score-2").value;
+var c=document.querySelector("#Score-3").value;
+var d=((+a)+(+b)+(+c))/3;
+var z=d.toFixed(2);
+document.querySelector("#Dolphins_average").innerHTML=z;
+
+var e=document.querySelector("#Score-4").value;
+var g=document.querySelector("#Score-5").value;
+var h=document.querySelector("#Score-6").value;
+var i=((+e)+(+g)+(+h))/3;
+var j=i.toFixed(2);
+document.querySelector("#Koalas_average").innerHTML=j;
+
+// if(z>j)
+
+// {document.write("Winner is Koalas");} 
+
+// else if (z<j)
+// {
+//  document.write("Winner is Dolphins");
+// }
+
+}
+
+function turnon(){
+
+var a=document.querySelector("#Score-1").value;
+var b=document.querySelector("#Score-2").value;
+var c=document.querySelector("#Score-3").value;
+var d=((+a)+(+b)+(+c));
+var z=d.toFixed(2);
+
+
+var e=document.querySelector("#Score-4").value;
+var g=document.querySelector("#Score-5").value;
+var h=document.querySelector("#Score-6").value;
+var i=((+e)+(+g)+(+h));
+var j=i.toFixed(2);
+
+if(z>j)
+
+{
+// document.write("Winner is Koalas");
+// document.querySelector("#Image").src="photo.jpg";
+document.querySelector("#h1s").innerHTML="Winner is Dolphins";
+
+
+} 
+
+else if (z<j)
+{
+// document.write("Winner is Dolphins");
+document.querySelector("#h1s").innerHTML="Winner is Koalas";
+}
+
+}
+</script>
+
+</body>
+</html>
