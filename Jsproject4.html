@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jsproject4</title>
+</head>
+<style>
+.container{width: 30%;
+margin: auto;
+text-align: center;
+background-image: url(nature/silhouette-fitness-bless-you-bike-37836.jpeg);
+background-size: cover;
+color:white ;
+}
+#meter{width: 70%;
+height: 25px;}
+
+#CentiMeter{width: 70%;
+height: 25px;}
+
+#meteroutput{color: white;
+font-size: 20px;
+width: 70%;
+height: 25px;
+border: 1px solid rgb(153, 255, 0);
+margin: auto;
+font-weight: 1200;}
+
+button{width: 130px;
+height: 30px;
+border: none;
+border-radius: 10px;
+background-color: rgb(153, 255, 0);}
+
+@media(max-width:700px){
+
+.container{width: 100%;
+    height: 100vh;
+margin: auto;
+text-align: center;
+background-image: url(nature/silhouette-fitness-bless-you-bike-37836.jpeg);
+background-size: cover;
+color:white ;
+}
+
+
+
+
+}
+
+</style>
+<body>
+<div class="container">
+<h2>Meter To Centimeter</h2>
+Length(Meter) <br><input type="number" id="meter"><br><br>
+<p id="meteroutput"></p><br>
+Length(CentiMeter)<input type="number" id="CentiMeter"><br><br>
+<button onclick="cal()">Convert-Cm</button>    
+<button onclick="cal2()">Convert-M</button>  <br><br>  
+</div> 
+
+<script>
+function cal(){
+var a=document.querySelector("#meter").value;
+var b=a*100;
+document.querySelector("#meteroutput").innerHTML=b;
+}
+
+function cal2(){
+var c=document.querySelector("#CentiMeter").value;
+var d=c/100;
+document.querySelector("#meteroutput").innerHTML=d;
+
+}
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
