@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Jsproject3</title>
+</head>
+<style>
+.container{width: 30%;
+height: 75vh;
+margin: auto;
+text-align: center;
+background-image:url(background-Image.jpg) ;}
+
+#evenodd{width: 250px;
+height: 28px;
+border-color:rgb(43, 163, 7) ;}
+
+button{width: 250px;
+height: 28px;
+background-color: rgb(43, 163, 7);
+border: none;}
+
+h2{color:  white;}
+
+.main{padding: 2px 50px;}
+
+.quection{font-size: 18px;
+color:white;}
+
+.answer{color: white;}
+
+@media(max-width:700px){
+
+.container{width: 100%;
+height: 100vh;
+margin: auto;
+text-align: center;
+background-image:url(background-Image.jpg) ;}
+
+.main{padding: 2px 50px;}
+
+
+
+}
+
+</style>
+
+<body>
+<div class="container">
+<div class="main">   
+<h2>Check The Even & Odd Number</h2>   
+<input type="number" placeholder="Enter a Value" id="evenodd">
+<h2 id="box">Output</h2>
+
+<button onclick="cal()">Result</button>
+
+<p class="quection">What is the definition of odd and even numbers?</p>
+<p class="answer">What are even and odd numbers? Even numbers are divisible by 2 without remainders. They end in 0, 2, 4, 6, or 8. Odd numbers are not evenly divisible by 2 and end in 1, 3, 5, 7, or 9. You can tell whether a number is odd or even regardless of how many digits it has by looking at the final digit.</p>
+</div> 
+</div>
+
+
+<script>
+function cal(){
+var a=document.querySelector("#evenodd").value;
+
+
+if(a%2==0){
+document.querySelector("#box").innerHTML="Even";
+}
+
+else{
+document.querySelector("#box").innerHTML="Odd";
+}
+
+}
+
+</script>
+</body>
+</html>
