@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jsproject6</title>
+</head>
+<style>
+.container{width: 30%;
+/* height: 115vh; */
+margin: auto;
+border: 5px solid crimson;}
+
+.txt{margin-left: 10%;}
+
+.table,.table2{margin-left: 10%;
+text-align: center;}
+
+.result{text-align: center;}
+
+.interest{text-align: center;}
+
+#mainResult{width: 50%;
+height: 25px;
+border: 1px solid crimson;
+margin-left: 25%;
+color: crimson;}
+
+#maininterest{width: 50%;
+height: 25px;
+border: 1px solid crimson;
+margin-left: 25%;
+color: crimson;
+}
+
+button{width: 40%;
+height: 30px;
+background-color: crimson;
+color: white;
+border: none;
+border-radius: 10px;}
+
+h2{color: crimson;}
+
+input{height: 20px;}
+
+@media(max-width:700px){
+
+.container{width: 100%;
+/* height: 110vh; */
+margin: auto;
+border: 5px solid crimson;}
+
+
+
+
+}
+
+
+</style>
+<body>
+<div class="container">
+<div class="txt">
+<h2>How to Calculate Simple Interest Value?</h2> 
+<p> The simple interest calculator will show the accrued amount that includes both principal and the interest. The simple interest calculator works on the mathematical formula: <br>
+A = P (1+rt) <br>
+P = Principal Amount <br>
+R = Rate of interest <br>
+t = Number of years <br>
+A = Total accrued amount (Both principal and the interest) <br>
+</p>
+</div>
+
+<div class="table">
+<table>
+<tr>
+<td>Principal Amount:-</td> 
+<td><input type="number" placeholder="Principal Amount" id="Principal_Amount"></td>
+</tr>
+
+<tr>
+<td>Rate of interest:-</td> 
+<td><input type="number" placeholder="Rate of interest" id="Rate_of_interest"></td>
+</tr>
+
+<tr>
+<td>Number of years(t):-</td> 
+<td><input type="number" placeholder="Number of years" id="Number_of_years"></td>
+</tr>
+</table>
+</div>
+
+<div class="result">
+<p id="mainResult">Total accrued amount</p>
+<button onclick="cals1()">Find Amount</button>
+</div>
+
+<div class="table2">
+<b><p>Interest =(A-P)</p></b>
+<table>
+<tr>
+<td>Total accrued amount:-</td> 
+<td><input type="number" placeholder="Total accrued amount" id="Total_Amount"></td>
+</tr> 
+<tr>
+<td>Principal Amount:-</td> 
+<td><input type="number" placeholder="Principal Amount" id="Principal_Amount1"></td>
+</tr>
+</table>
+</div>
+
+<div class="interest">
+<p id="maininterest">Total Interest</p>
+<button onclick="cals2()">Find Interest</button>
+</div>
+<br>
+</div>
+
+<script>
+    
+function cals1(){
+var a=document.querySelector("#Principal_Amount").value;
+var b=document.querySelector("#Rate_of_interest").value;
+var c=document.querySelector("#Number_of_years").value;
+var d=(+a)*(1+(b/100*c));
+document.querySelector("#mainResult").innerHTML=d;
+}
+
+
+function cals2(){
+var e=document.querySelector("#Total_Amount").value;
+var f=document.querySelector("#Principal_Amount1").value;
+var g=(+e)-(+f);
+document.querySelector("#maininterest").innerHTML=g;
+
+}
+
+</script>
+    
+</body>
+</html>
